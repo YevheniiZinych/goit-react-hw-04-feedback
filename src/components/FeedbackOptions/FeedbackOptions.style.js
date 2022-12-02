@@ -7,9 +7,9 @@ export const FeedbackBtn = styled.button`
   font-size: 16px;
   line-height: 1.62;
   padding: 6px 22px;
+  cursor: pointer;
   border-radius: 4px;
   border: none;
-  cursor: pointer;
 
   &:hover,
   &:focus {
