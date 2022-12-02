@@ -3,6 +3,8 @@ import Section from './Section';
 import FeedbackOptions from './FeedbackOptions';
 import Statistics from './Statistics';
 import Notification from './Notification';
+import { ContainerBtn } from './Container/Container';
+import { ContainerStat } from './Container/Container.style';
 
 class App extends Component {
   state = {
@@ -36,22 +38,26 @@ class App extends Component {
   render() {
     return (
       <Section title="Please leave feedback">
-        <FeedbackOptions
-          options={['good', 'neutral', 'bad']}
-          onLeaveFeedback={this.onLeaveFeedback}
-        />
-        <Notification
-          message="There is no feedback"
-          totalFeedback={this.countTotalFeedback}
-        >
-          <Statistics
-            totalFeedback={this.countTotalFeedback}
-            good={this.state.good}
-            neutral={this.state.neutral}
-            bad={this.state.bad}
-            positivePercentage={this.countPositiveFeedbackPercentage}
+        <ContainerBtn>
+          <FeedbackOptions
+            options={['good', 'neutral', 'bad']}
+            onLeaveFeedback={this.onLeaveFeedback}
           />
-        </Notification>
+        </ContainerBtn>
+        <ContainerStat>
+          <Notification
+            message="There is no feedback"
+            totalFeedback={this.countTotalFeedback}
+          >
+            <Statistics
+              totalFeedback={this.countTotalFeedback}
+              good={this.state.good}
+              neutral={this.state.neutral}
+              bad={this.state.bad}
+              positivePercentage={this.countPositiveFeedbackPercentage}
+            />
+          </Notification>
+        </ContainerStat>
       </Section>
     );
   }

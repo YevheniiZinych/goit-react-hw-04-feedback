@@ -1,15 +1,11 @@
 import styled from 'styled-components';
 
 export const FeedbackBtn = styled.button`
-  /* display: flex; */
-  /* gap: 10px; */
-
   font-family: inherit;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  color: var(--main-color);
   padding: 6px 22px;
   border-radius: 4px;
   border: none;
@@ -26,4 +22,12 @@ export const FeedbackBtn = styled.button`
   &:not(:last-child) {
     margin-right: 10px;
   }
+`;
+
+export const Wrapper = styled.div`
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  /* display: grid;
+  align-self: center; */
 `;

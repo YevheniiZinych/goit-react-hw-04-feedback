@@ -1,12 +1,25 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
-export const titleText = styled.h1`
-  font-size: 36px;
-  line-height: 1.17;
-  /* text-align: center; */
+const colorize = keyframes`
+  0% {
+    transform: translateY(0);
+    color: yellow;
+  }
+
+  50% {
+    transform: translateY(5px);
+    color: blue;
+  }
+
+  100% {
+    transform: translateY(0);
+    color: yellow;
+  }
 `;
 
-export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+export const TitleText = styled.h1`
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  animation: ${colorize} 1s linear infinite;
 `;
